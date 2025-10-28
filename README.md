@@ -26,13 +26,13 @@ npm install @storacha/client
 Interactive (prompts for email):
 
 ```bash
-node "c:/Users/Admin/Downloads/C. D. EXPERT/upload.js"
+node upload.js
 ```
 
 Non-interactive (use environment variable to provide email):
 
 ```bash
-STORACHA_EMAIL='zaphod@beeblebrox.galaxy' node "c:/Users/Admin/Downloads/C. D. EXPERT/upload.js"
+STORACHA_EMAIL='zaphod@beeblebrox.galaxy' node upload.js
 ```
 
 Notes
