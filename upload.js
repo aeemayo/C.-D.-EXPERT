@@ -53,21 +53,8 @@ function ask(question, { hide = false } = {}) {
 		}
 
 		const result = await client.capability.upload.list();
+        console.log('Uploads result:', result)
 
-		// Print a concise summary and full JSON
-		if (Array.isArray(result)) {
-			console.log(`Found ${result.length} uploads:\n`);
-			result.forEach((u, i) => {
-				console.log(`#${i + 1}: id=${u.id || u.uploadId || '(no id)'} name=${u.name || u.filename || '(no name)'}
-	created=${u.created || u.createdAt || '(no date)'}
-`);
-			});
-		} else {
-			console.log('Uploads result:', result);
-		}
-
-		console.log('\nFull JSON output:');
-		console.log(JSON.stringify(result, null, 2));
 
 	} catch (err) {
 		console.error('Unexpected error:', err && err.stack ? err.stack : err);
